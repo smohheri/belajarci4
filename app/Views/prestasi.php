@@ -1,7 +1,7 @@
 <?= $this->extend('templates/layout'); ?>
 <?= $this->section('content'); ?>
 <div class="container">
-    <div class="row">
+    <div class="row animate__animated animate__backInDown">
         <div class="col-12">
             <div class="card card-widget widget-user">
                 <div class="widget-user-header text-white" style="background: url(<?= base_url('/assets/images/login-image.jpg') ?>); width: 100%;">
@@ -52,7 +52,7 @@
         </div>
     </div>
     <!-- start tabel prestasi -->
-    <div class="row">
+    <div class="row animate__animated animate__bounceInDown">
         <div class="col-12">
             <div class="card card-body">
                 <h5 class="text-center">Daftar Prestasi</h5>

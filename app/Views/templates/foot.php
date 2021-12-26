@@ -1,4 +1,4 @@
-    <div class="container bg-transparent">
+    <div class="container bg-transparent animate__animated animate__bounceInDown">
         <div class="row">
             <div class="col-12">
                 .<div class="card ">
