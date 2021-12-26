@@ -4,7 +4,7 @@
 
 <div class="content-wrapper">
     <div class="container-fluid">
-        <div class="row animate__animated animate__backInDown">
+        <div class="row animate__animated animate__backInDown ">
             <div class="col-12">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
@@ -29,9 +29,17 @@
                     </a>
                 </div>
             </div>
-            <!-- end carousel -->
+            <!-- end carousel & row -->
         </div>
-
+        <div class="row">
+            <div class="col-4">
+                <?php $no = 1; ?>
+                <?php foreach ($daftar as $d) : ?>
+                    <?= $d['username']; ?>
+                    <?= $d['password']; ?>
+                <?php endforeach ?>
+            </div>
+        </div>
         <!-- end container-fluid -->
     </div>
     <!-- end content wrapper -->
