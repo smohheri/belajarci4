@@ -1,7 +1,7 @@
 <?= $this->extend('templates/layout'); ?>
 
 <?= $this->section('content'); ?>
-<div class="content-wrapper">
+<div class="container">
     Pelanggaran
     <!-- end content wrapper -->
 </div>

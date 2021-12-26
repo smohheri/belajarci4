@@ -16,7 +16,7 @@ class Home extends BaseController
         $data = [
             'page' => 'Beranda',
             'stat' => 'home',
-            'daftar'    => $this->siswaModel->find()
+            'daftar'    => $this->siswaModel->findAll()
         ];
 
         return view('home', $data);

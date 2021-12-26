@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand-md navbar-dark navbar-primary mb-2">
+<nav class="main-header navbar navbar-expand-md navbar-dark bg-primary mb-2">
     <div class="container">
         <a href="<?= base_url() ?>" class="navbar-brand">
             <img src="<?= base_url('/assets/images/logo-smk.png') ?>" alt="SMK Logo" class="brand-image " style="opacity: 1">
@@ -23,7 +23,7 @@
                     <a href="<?= base_url('Home/pelanggaran') ?>" class=" nav-link mr-3">Pelanggaran</a>
                 </li>
                 <li class="nav-item">
-                    <a name="" id="" class="btn btn-light bg-primary" href="#" role="button">Login</a>
+                    <a href="<?= base_url('Home/login') ?>" class=" nav-link mr-3">Login</a>
                 </li>
             </ul>
         </div>
