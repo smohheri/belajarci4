@@ -1,8 +1,10 @@
 <footer class="main-footer fixed-bottom bg-orange">
-    <div class="float-right d-none d-sm-block">
-        <b>Version</b> <?= Version ?>
+    <div class="container">
+        <div class="float-right d-none d-sm-block">
+            <b>Version</b> <?= Version ?>
+        </div>
+        <strong>Copyright &copy <a href="https://smksbinamadina.sch.id">SMK Bina Madina</a> </strong> All Rights Reserved. Build &#64 2021-<?= date("Y") ?> .</strong>
     </div>
-    <strong>Copyright &copy <a href="https://smksbinamadina.sch.id">SMK Bina Madina</a> </strong> All Rights Reserved. Build &#64 2021-<?= date("Y") ?> .</strong>
 </footer>
 
 <!-- end wrapper -->

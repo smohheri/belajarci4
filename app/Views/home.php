@@ -3,7 +3,7 @@
 
 
 <div class="content-wrapper">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row animate__animated animate__backInDown ">
             <div class="col-12">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
