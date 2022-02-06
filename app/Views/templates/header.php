@@ -22,7 +22,7 @@
                 <li class="nav-item <?php if ($stat == 'pelanggaran') echo 'active ' ?>">
                     <a href="<?= base_url('Home/pelanggaran') ?>" class=" nav-link mr-3">Pelanggaran</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?php if ($stat == 'login') echo 'active ' ?>">
                     <a href="<?= base_url('Home/login') ?>" class=" nav-link mr-3">Login</a>
                 </li>
             </ul>

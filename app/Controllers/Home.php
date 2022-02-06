@@ -37,4 +37,11 @@ class Home extends BaseController
         ];
         return view('pelanggaran', $data);
     }
+    public function login() {
+        $data = [
+            'page' => 'Login',
+            'stat' => 'login'
+        ];
+        return view('login', $data);
+    }
 }
