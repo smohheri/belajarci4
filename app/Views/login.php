@@ -29,7 +29,7 @@
         </div>
         <div class="col-6">
             <form action="" method="post">
-                <div class="card card-danger">
+                <div class="card card-info">
                     <div class="card-header">
                         <div class="card-title" style="text-align: center;">
                             Login Guru
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="btn btn-danger float-right">Login</span>
+                        <span class="btn btn-info float-right">Login</span>
                     </div>
                 </div>
             </form>

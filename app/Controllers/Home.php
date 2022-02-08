@@ -44,4 +44,14 @@ class Home extends BaseController
         ];
         return view('login', $data);
     }
+
+    public function admin()
+    {
+
+        $data = [
+            'page' => 'Admin',
+            'stat' => 'admin'
+        ];
+        return view('admin', $data);
+    }
 }

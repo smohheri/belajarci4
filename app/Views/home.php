@@ -4,7 +4,7 @@
 
 <div class="content-wrapper">
     <div class="container" style="border-radius: 10px;">
-        <div class="row animate__animated animate__backInDown ">
+        <div class="row">
             <div class="col-12">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
