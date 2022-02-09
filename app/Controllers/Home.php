@@ -90,6 +90,6 @@ class Home extends BaseController
                 return redirect()->to('/Dashboard');
             }
         }
-        return redirect()->to('/Home/admin');
+        return redirect()->to('/admin');
     }
 }
