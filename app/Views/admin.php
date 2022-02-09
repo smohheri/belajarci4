@@ -8,23 +8,23 @@
 
         </div>
         <div class="col-6">
-            <form action="" method="post">
+            <form action="<?= base_url('/Home/loginAdmin') ?>" method="post">
                 <div class="card card-danger">
                     <div class="card-header">
                         Login Admin
                     </div>
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="">User :</label>
-                            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                            <label for="username">User :</label>
+                            <input type="text" class="form-control" name="username" id="" aria-describedby="helpId" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="">Password :</label>
-                            <input type="password" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                            <label for="password">Password :</label>
+                            <input type="password" class="form-control" name="password" id="" aria-describedby="helpId" placeholder="">
                         </div>
                     </div>
                     <div class="card-footer">
-                        <sapn class="btn btn-danger float-right">Login</sapn>
+                        <input type="submit" value="Login" class="btn btn-danger float-right"></input>
                     </div>
                 </div>
             </form>

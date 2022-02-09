@@ -68,20 +68,28 @@ class Home extends BaseController
 
     public function loginGuru()
     {
-        $login = $this->request->getPost('login');
-        if ($login) {
-            $user = $this->request->getPost('niyGuru');
-            $password = $this->request->getPost('passwordGuru');
+    }
 
-            if ($user == '' or $password == '') {
-                $err = "Silahkan masukkan NIY atau Password dengan benar";
-            }
-            if ($err) {
-                session()->setFlashdata('niyGuru', $user);
-                session()->setFlashdata('error', $err);
-                return redirect()->to('/Home/login');
+    public function loginAdmin()
+    {
+        $session = session();
+        $user = $this->request->getVar('username');
+        $pass = $this->request->getVar('password');
+        $login  = $this->adminModel->where('username', $user)->first();
+        if ($login) {
+            $password = password_hash($pass, PASSWORD_BCRYPT);
+            $verify_pass = password_verify($password, $login['password']);
+            if ($verify_pass) {
+                $ses_data = [
+                    'user_id'   => $login['id'],
+                    'user_name' => $login['username'],
+                    'logged_in' => true,
+                    'level'     => 'admin'
+                ];
+                $session->set($ses_data);
+                return redirect()->to('/Dashboard');
             }
         }
-        return redirect()->to('/Home/login');
+        return redirect()->to('/Home/admin');
     }
 }
