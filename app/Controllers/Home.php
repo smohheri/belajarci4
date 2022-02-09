@@ -3,13 +3,16 @@
 namespace App\Controllers;
 
 use App\Models\Siswa;
+use App\Models\Admin;
 
 class Home extends BaseController
 {
     protected $siswaModel;
+    protected $adminModel;
     public function __construct()
     {
         $this->siswaModel = new Siswa();
+        $this->adminModel = new Admin();
     }
     public function index()
     {
@@ -47,11 +50,38 @@ class Home extends BaseController
 
     public function admin()
     {
-
         $data = [
             'page' => 'Admin',
             'stat' => 'admin'
         ];
         return view('admin', $data);
+    }
+
+    public function loginSiswa()
+    {
+        $data = [
+            'page' => 'Error',
+            'stat' => 'error'
+        ];
+        return redirect()->to('/Home/login');
+    }
+
+    public function loginGuru()
+    {
+        $login = $this->request->getPost('login');
+        if ($login) {
+            $user = $this->request->getPost('niyGuru');
+            $password = $this->request->getPost('passwordGuru');
+
+            if ($user == '' or $password == '') {
+                $err = "Silahkan masukkan NIY atau Password dengan benar";
+            }
+            if ($err) {
+                session()->setFlashdata('niyGuru', $user);
+                session()->setFlashdata('error', $err);
+                return redirect()->to('/Home/login');
+            }
+        }
+        return redirect()->to('/Home/login');
     }
 }
